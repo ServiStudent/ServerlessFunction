@@ -1,9 +1,9 @@
-const data = require('../shared/product-data');
+const data = require('../shared/exercise-data');
 
 module.exports = async function (context, req) {
   try {
-    const products = data.getProducts();
-    context.res.status(200).json(products);
+    const exercises = data.getExercises();
+    context.res.status(200).json(exercises);
   } catch (error) {
     context.res.status(500).send(error);
   }

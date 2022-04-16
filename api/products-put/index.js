@@ -1,7 +1,7 @@
-const data = require('../shared/product-data');
+const data = require('../shared/exercise-data');
 
 module.exports = async function (context, req) {
-  const product = {
+  const exercise = {
     id: parseInt(req.params.id, 10),
     name: req.body.name,
     description: req.body.description,
@@ -9,8 +9,8 @@ module.exports = async function (context, req) {
   };
 
   try {
-    const updatedProduct = data.updateProduct(product);
-    context.res.status(200).json(updatedProduct);
+    const updatedExercise = data.updateExercise(exercise);
+    context.res.status(200).json(updatedExercise);
   } catch (error) {
     context.res.status(500).send(error);
   }

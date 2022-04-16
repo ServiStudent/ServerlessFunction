@@ -6,7 +6,7 @@
       "direction": "in",
       "name": "req",
       "methods": ["delete"],
-      "route": "products/{id}"
+      "route": "exercises/{id}"
     },
     {
       "type": "http",
