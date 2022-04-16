@@ -18283,7 +18283,9 @@ const getExercises = () => {
 };
 
 const getExercisesByName = (name) => {
-  return data.exercises.indexOf(name) > -1;
+  return data.exercises.filter(res => {
+    return(JSON.stringify(res).toLocaleLowerCase()).match(name.toLocaleLowerCase());
+  });
 };
 
 const getExercisesCount = () => {
