@@ -1,5 +1,5 @@
 const data = {
-  products: [
+  exercises: [
     {
       id: 10,
       name: 'Strawberries',
@@ -27,27 +27,27 @@ const getRandomInt = () => {
   return Math.floor(Math.random() * Math.floor(max) + min);
 };
 
-const addProduct = (product) => {
-  product.id = getRandomInt();
-  data.products.push(product);
-  return product;
+const addExercise = (exercise) => {
+  exercise.id = getRandomInt();
+  data.exercises.push(exercise);
+  return exercise;
 };
 
-const updateProduct = (product) => {
-  const index = data.products.findIndex((v) => v.id === product.id);
-  console.log(product);
-  data.products.splice(index, 1, product);
-  return product;
+const updateExercise = (exercise) => {
+  const index = data.exercises.findIndex((v) => v.id === exercise.id);
+  console.log(exercise);
+  data.exercises.splice(index, 1, exercise);
+  return exercise;
 };
 
-const deleteProduct = (id) => {
+const deleteExercise = (id) => {
   const value = parseInt(id, 10);
-  data.products = data.products.filter((v) => v.id !== value);
+  data.exercises = data.exercises.filter((v) => v.id !== value);
   return true;
 };
 
-const getProducts = () => {
-  return data.products;
+const getExercises = () => {
+  return data.exercises;
 };
 
-module.exports = { addProduct, updateProduct, deleteProduct, getProducts };
+module.exports = { addExercise, updateExercise, deleteExercise, getExercises };
