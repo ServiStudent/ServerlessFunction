@@ -18279,7 +18279,11 @@ const deleteExercise = (id) => {
 };
 
 const getExercises = () => {
-  return data.exercises;
+  return data.exercise;
 };
 
-module.exports = { addExercise, updateExercise, deleteExercise, getExercises };
+const getExercisesCount = () => {
+  return data.exercises.length;
+};
+
+module.exports = { addExercise, updateExercise, deleteExercise, getExercises, getExercisesCount };
