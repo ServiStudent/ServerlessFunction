@@ -18279,7 +18279,7 @@ const deleteExercise = (id) => {
 };
 
 const getExercises = () => {
-  return data.exercise;
+  return data.exercises;
 };
 
 const getExercisesCount = () => {
