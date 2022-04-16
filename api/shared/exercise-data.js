@@ -18282,8 +18282,12 @@ const getExercises = () => {
   return data.exercises;
 };
 
+const getExercisesByName = (name) => {
+  return data.exercises.filter(v => v.includes(name));
+};
+
 const getExercisesCount = () => {
   return data.exercises.length;
 };
 
-module.exports = { addExercise, updateExercise, deleteExercise, getExercises, getExercisesCount };
+module.exports = { addExercise, updateExercise, deleteExercise, getExercises, getExercisesByName, getExercisesCount };
